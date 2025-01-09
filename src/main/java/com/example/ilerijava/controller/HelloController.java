@@ -25,14 +25,17 @@ public class HelloController {
     }
 
     @GetMapping("/goodbye")
-    public String sayGoodbye(@RequestParam Long id) {
+    public String sayGoodbye(@RequestParam(required = false, defaultValue = "1") Long id) {
         return helloService.getGoodbyeMessage(id);
     }
+
 
     @GetMapping("/user")
     public String getUserById(@RequestParam Long id) {
         Optional<User> user = userRepository.findById(id);
         return user.map(u -> "Kullanıcı: " + u.getUsername()).orElse("Kullanıcı bulunamadı");
     }
+
+
 }
 
