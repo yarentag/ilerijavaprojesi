@@ -19,6 +19,11 @@ import org.springframework.web.bind.annotation.RestController;
     public String sayHello() {
         return helloService.getHelloMessage();
     }
+    @GetMapping("/goodbye")
+    public String sayGoodbye() {
+        return helloService.getGoodbyeMessage();
+    }
+
 
 }
 
