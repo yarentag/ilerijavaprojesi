@@ -8,5 +8,8 @@ public class HelloService {
     public String getHelloMessage() {
         return "Merhaba, Spring Boot!";
 }
+    public String getGoodbyeMessage() {
+        return "Görüşmek üzere!";
+    }
 
 }
