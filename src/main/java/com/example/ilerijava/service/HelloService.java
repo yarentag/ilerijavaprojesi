@@ -20,8 +20,8 @@ public class HelloService {
 
     public String getGoodbyeMessage(Long id) {
         return userRepository.findById(id)
-                .map(user -> "Görüşmek üzere, " + user.getUsername())
-                .orElse("Kullanıcı bulunamadı.");
+                .map(user -> "Goodbye, " + user.getUsername())
+                .orElse("User not found");
     }
 
 
